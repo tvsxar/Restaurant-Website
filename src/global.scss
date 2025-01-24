@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=Libre+Franklin:wght@100..900&display=swap');
+
+$black: #000;
+$gray: #999;
+$white: #fff;
+$accent-color: #5AB963;
+
+$main-font: "Libre Franklin", serif;
+$secondary-font: "IBM Plex Mono", serif;
+
+body {
+    font-family: $main-font;
+    color: $black;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}

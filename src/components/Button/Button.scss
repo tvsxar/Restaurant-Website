@@ -1,0 +1,38 @@
+@use '../../global.scss' as g;
+
+.start-btn {
+    display: inline-block;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.88;
+    background: g.$accent-color;
+    color: g.$white;
+    padding: 15px 30px;
+    border-radius: 4px;
+    transition: transform 0.2s ease;
+
+    &.white-btn {
+        padding: 11px 37px;  
+        border: 2px solid #FFF;
+        background: none;
+
+        &:hover {
+            transform: scale(1);
+            color: g.$accent-color;
+        }
+    }
+
+    &.text-btn {
+        font-size: 34px;
+        padding: 0;
+        border: none;
+        background: none;
+        font-weight: 800;
+        color: g.$accent-color;
+    }
+
+    &:hover {
+        transform: scale(1.02);
+    }
+}
