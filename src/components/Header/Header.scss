@@ -1,17 +1,18 @@
 @use '../../global.scss' as g;
 @use '../Button/Button.scss' as b;
 
+@mixin flex-center($direction: row, $gap: 0) {
+    display: flex;
+    flex-direction: $direction;
+    gap: $gap;
+}
+
 .header {
     background: url('../../assets/images/header-img.png');
     background-size: cover;
     background-position: center center;
-    background-repeat: no-repeat;
     padding-bottom: 120px;
     position: relative;
-
-    @media (max-width: 768px) {
-        padding-bottom: 60px;
-    }
 }
 
 .header-navbar {
@@ -21,17 +22,12 @@
     padding: 13px 0;
     position: relative;
 
-    .navbar-content {
-        transform: translateY(-100%);
-        transition: transform 0.3s ease;
-    }
-
-    .header-button {
-        text-align: left;
-        width: 100%;
-    }
-
     @media (max-width: 768px) {
+        .logo {
+            padding-left: 20px;
+            padding-top: 20px;
+        }
+
         &.open {
             position: fixed;
             top: 0;
@@ -41,8 +37,9 @@
             z-index: 1;
             background: g.$white;
 
-        .navbar-content {
-            transform: translateY(0);
+        .header-button {
+            text-align: left;
+            width: 100%;
         }
 
         .logo, .dot {
@@ -56,12 +53,11 @@
             gap: 30px;
             color: g.$black;
             width: 100%;
-            text-align: left;
         }
 
         .navbar-content {
             position: fixed;
-            top: 20px;
+            top: 0px;
             z-index: 1;
         }
 
@@ -76,13 +72,11 @@
 }
 
 .navbar-content {
-    display: flex;
+    @include flex-center(row, 35px);
     align-items: center;
-    gap: 35px;
     padding: 20px 0 20px 20px;
 
     color: g.$white;
-    transition: transform 0.3s ease;
 
     @media (max-width: 768px) {
         display: none;
@@ -90,14 +84,12 @@
 }
 
 .burger-menu {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
+    @include flex-center(column, 5px);
     cursor: pointer;
     padding: 10px;
-    position: fixed;
+    position: absolute;
     top: 20px;
-    right: 20px;
+    right: 0px;
     z-index: 1;
     
     @media (max-width: 768px) {
@@ -112,6 +104,9 @@
     }
 
     &.open {
+        top: 20px;
+        right: 15px;
+
         .line:nth-child(1) {
             transform: translateY(8px) rotate(45deg);
             background-color: g.$black;
