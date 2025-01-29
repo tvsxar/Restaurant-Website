@@ -1,0 +1,42 @@
+.promotion {
+    padding: 7.5rem 0;
+}
+
+.title-container {
+    max-width: 32rem;
+    margin-bottom: 3.4rem;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+@media (max-width: 1024px) {
+    .promotion {
+        padding: 5rem 0;
+    }
+
+    .promotion-content {
+        padding: 0 1rem;
+    }
+
+    .title-container {
+        max-width: 28rem;
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .title-container {
+        margin: 0 auto 3rem;
+        text-align: center;
+        max-width: 32rem;
+    }
+
+    .card-container {
+        flex-direction: column;
+    }
+}

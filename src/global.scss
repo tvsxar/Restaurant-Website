@@ -11,10 +11,21 @@ $secondary-font: "IBM Plex Mono", serif;
 body {
     font-family: $main-font;
     color: $black;
+    font-size: 1rem;
+    user-select: none;
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 73rem;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 1rem;
+
+    @media (max-width: 1024px) {
+            max-width: 80rem;
+    }
+
+    @media (max-width: 768px) {
+        max-width: 90rem;
+        padding: 0 0.5rem;
+    }
 }

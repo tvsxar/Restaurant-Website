@@ -1,0 +1,95 @@
+@use '../../global.scss' as g;
+
+.card {
+    padding: 3.2rem 2.56rem;
+    border: 1px solid #F7F7F7;
+    width: 24rem;
+    height: 21rem;
+
+    &:hover {
+        box-shadow: 0rem 0.3125rem 1.25rem 0rem rgba(0, 0, 0, 0.05);
+    }
+}
+
+.card-title {
+   font-size: 1rem;
+   font-weight: 700;
+   line-height: 1.5;
+
+   margin-top: 1.6rem;
+   margin-bottom: 0.8rem;
+}
+
+.card-description {
+    color: g.$gray;
+    font-family: g.$secondary-font;
+    font-size: 0.8125rem;
+    font-weight: 400;
+    line-height: 1.85;
+}
+
+@media (max-width: 1024px) {
+    .card {
+        padding: 2.8rem 2.2rem;
+        width: 20rem;
+        height: 16rem;
+    }
+
+    .card-icon {
+        transform: scale(0.7);
+    }
+
+    .card-title {
+        font-size: 0.8rem;
+        margin-top: 1.2rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .card-description {
+        font-size: 0.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        padding: 3.2rem 2.56rem;
+        width: 24rem;
+        height: 21rem;
+    }
+
+    .card-icon {
+        transform: scale(1);
+    }
+
+    .card-title {
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 1.5;
+    }
+
+    .card-description {
+        font-size: 0.81rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .card {
+        padding: 2.6rem 2.1rem;
+        width: 18rem;
+        height: 16rem;
+    }
+
+    .card-icon {
+        transform: scale(0.7);
+    }
+
+    .card-title {
+        font-size: 0.8rem;
+        margin-top: 1.2rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .card-description {
+        font-size: 0.6rem;
+    }
+}
