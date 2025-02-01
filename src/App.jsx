@@ -1,5 +1,6 @@
 import Header from './components/Header/Header';
 import Promotion from './components/Promotion/Promotion';
+import Decoration from './components/Decoration/Decoration';
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
       <div className='app'>
         <Header />
         <Promotion />
+        <Decoration />
       </div>
     </>
   )

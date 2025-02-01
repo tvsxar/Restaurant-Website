@@ -22,3 +22,13 @@
         font-size: 1.3rem;
     }
 }
+
+@media (max-width: 425px) {
+    .main-title {
+        font-size: 1.1rem;
+    }
+
+    .secondary-title {
+        font-size: 1.1rem;
+    }
+}
