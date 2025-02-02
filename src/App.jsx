@@ -2,6 +2,7 @@ import Header from './components/Header/Header';
 import Promotion from './components/Promotion/Promotion';
 import Decoration from './components/Decoration/Decoration';
 import Offers from './components/Offers/Offers';
+import Research from './components/Research/Research';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Promotion />
         <Decoration />
         <Offers />
+        <Research />
       </div>
     </>
   )
