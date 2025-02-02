@@ -3,6 +3,8 @@
 $black: #000;
 $gray: #999;
 $white: #fff;
+$copyrights-color: #666;
+$footer-color: #0A0E1A;
 $border-color: #E6E6E6;
 $accent-color: #5AB963;
 
@@ -29,4 +31,9 @@ body {
         max-width: 90rem;
         padding: 0 0.5rem;
     }
+}
+
+.no-scroll {
+    overflow: hidden;
+    height: 100vh;
 }

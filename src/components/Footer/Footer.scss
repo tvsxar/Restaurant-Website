@@ -1,0 +1,141 @@
+@use '../../global.scss' as g;
+
+.footer {
+    background: g.$footer-color;
+    padding: 7.5rem 0 9rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.copyrights {
+    color: g.$copyrights-color;
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1.5;
+
+    margin-top: 1rem;
+}
+
+.footer-navigation {
+    display: flex;
+    gap: 3.1rem;
+    margin-right: 7.7rem;
+}
+
+.nav-block {
+    display: flex;
+    gap: 3.1rem;
+    align-items: flex-start;
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1.56rem;
+    }
+}
+
+.nav-block-item {
+    display: block;
+    color: g.$white;
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1.5;
+
+    &:hover {
+        color: g.$accent-color;
+    }
+}
+
+.socials {
+    display: flex;
+    gap: 1.3rem;
+}
+
+.social-item {
+    width: 0.75rem;
+    height: 0.75rem;
+    transition: all 0.2s ease;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+@media (max-width: 1024px) {
+    .footer {
+        padding: 6.5rem 0 8rem;
+    }
+
+    .footer-navigation {
+        margin-right: 3rem;
+        gap: 2.5rem;
+    }
+
+    .nav-block {
+        gap: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 5.5rem 0 1rem;
+    }
+
+    .footer-content {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 5rem;
+    }
+
+    .footer-titles {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .footer-navigation {
+        flex-direction: column;
+        gap: 3.5rem;
+        margin-right: 0;
+    } 
+
+    .nav-block {
+        gap: 2rem;
+    }
+
+    .socials {
+        justify-content: center;
+        gap: 4rem;
+    }
+
+    .social-item {
+        width: 1.1rem;
+        height: 1.1rem;
+    }
+    
+    .copyrights {
+        margin-top: 0;
+        font-size: 0.6rem;
+    }
+
+    .footer-logo {
+        scale: 0.6;
+    }
+}
+
+@media (max-width: 425px) {
+    .footer-content {
+        gap: 4rem;
+    }
+
+    .footer-navigation {
+        gap: 3rem;
+    }
+
+    .nav-block {
+        gap: 1.6rem;
+    }
+}

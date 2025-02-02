@@ -1,5 +1,5 @@
 import './Header.scss';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import Button from '../Button/Button';
 
 import logo from '../../assets/logo/logo.svg'
@@ -10,6 +10,19 @@ function Header() {
     function toggleMenu() {
         setIsMenuOpen(!isMenuOpen);
     }
+
+    useEffect(() => {
+        if (isMenuOpen) {
+            document.body.classList.add('no-scroll');
+        } else {
+            document.body.classList.remove('no-scroll');
+        }
+
+        return () => {
+            document.body.classList.remove('no-scroll');
+        };
+    }, [isMenuOpen]);
+
     return (
         <header className="header">
             <div className="container">
